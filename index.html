@@ -1,0 +1,893 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Trisaai Engineering Pte Ltd - Delivering excellence in construction, civil works, and architectural solutions in Singapore with over 20 years of industry expertise.">
+
+    <title>Trisaai Engineering Pte Ltd</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="icon" href="images/favicon.png" type="image/png" sizes="64x64">
+
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #f8f9fa;
+            position: relative;
+        }
+
+        /* Navigation */
+        .navbar {
+    background: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.04);
+    padding: 0.8rem 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar.scrolled {
+    background: rgba(255, 255, 255, 0.95);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-brand {
+    display: flex;
+    align-items: center;
+    font-size: 1.7rem;
+    font-weight: 700;
+    color: #1a1a2e !important;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.logo-img {
+    width: 160px;
+    height: 160px;
+    margin-right: 12px;
+    border-radius: 8px;
+    margin-top: -45px;
+    margin-bottom: -45px;
+}
+@media (max-width: 768px) {
+    .logo-img {
+        width: 100px;
+        height: 100px;
+        margin-top: -15px;
+        margin-bottom: -15px;
+    }
+    
+    .navbar-brand {
+        font-size: 1.3rem;
+    }
+}
+/* Light-colored nav links with hover-button effect */
+.navbar-nav .nav-link {
+    color: #2c3e50 !important;
+    background-color: transparent;
+    font-weight: 500;
+    padding: 8px 18px;
+    margin: 0 6px;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+/* Hover effect like button */
+.navbar-nav .nav-link:hover {
+    background-color: #eaf0ff;
+    color: #495057 !important;
+    box-shadow: 0 4px 12px rgba(102, 126, 234, 0.15);
+    transform: translateY(-2px);
+}
+
+/* Active style */
+.navbar-nav .nav-link.active {
+    background-color: #eaf0ff;
+    color: #667eea !important;
+    font-weight: 600;
+    box-shadow: 0 4px 12px rgba(102, 126, 234, 0.2);
+}
+
+/* Remove underline on hover if needed */
+.navbar-nav .nav-link::before {
+    content: none;
+}
+
+
+.navbar-nav .nav-link::before {
+    content: "";
+    position: absolute;
+    bottom: 2px;
+    left: 0;
+    height: 2px;
+    width: 0%;
+    background: linear-gradient(90deg, #667eea, #764ba2);
+    transition: width 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover::before,
+.navbar-nav .nav-link.active::before {
+    width: 100%;
+}
+
+.navbar-nav .nav-link:hover {
+    color: #764ba2 !important;
+}
+
+.navbar-toggler {
+    border: none;
+    font-size: 1.4rem;
+    color: #667eea;
+    transition: transform 0.3s ease;
+}
+
+.navbar-toggler:focus {
+    box-shadow: none;
+}
+
+.navbar-toggler:hover {
+    transform: rotate(90deg);
+}
+
+
+        /* Hero Section */
+       .hero {
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), 
+    url('https://images.unsplash.com/photo-1560179707-f14e90ef3623?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8Y29tcGFueSUyMGJ1aWxkaW5nfGVufDB8fDB8fHww');
+    background-size: cover;
+    background-position: center;
+    color: #ffffff;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+    padding: 0 20px;
+    overflow: hidden;
+}
+.hero-content {
+    background: rgba(0, 0, 0, 0.4); /* Optional: adds a soft dark backdrop */
+    padding: 30px;
+    border-radius: 12px;
+}
+.hero-content > * {
+    animation-delay: 0.2s;
+}
+
+.hero-welcome { animation-delay: 0.4s; }
+.hero-title { animation-delay: 0.6s; }
+.hero-subtitle { animation-delay: 0.8s; }
+.cta-buttons { animation-delay: 1s; }
+
+        .hero-welcome {
+            font-size: 1.2rem;
+            color: #e0e0e0;
+            margin-bottom: 10px;
+            font-weight: 400;
+            text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.6);
+        }
+
+        .hero-title {
+    font-size: 3.5rem;
+    font-weight: 900;
+    margin-bottom: 15px;
+    color: #ffffff;
+    text-transform: uppercase;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7);
+}
+.hero-subtitle {
+    font-size: 1.5rem;
+    color: #f0f0f0;
+    text-shadow: 1px 1px 6px rgba(0, 0, 0, 0.6);
+}
+
+        .cta-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+        }
+
+        .cta-btn {
+            padding: 12px 30px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            background: #ffffff;
+            color: #1a1a2e;
+            border: none;
+        }
+
+        .cta-btn:hover {
+            background: #e0e0e0;
+            color: #1a1a2e;
+        }
+        .cta-btn:hover {
+    background: #5a67d8;
+    color: #fff;
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(102, 126, 234, 0.4);
+}
+
+        .hero-description {
+            font-size: 1.1rem;
+            margin-bottom: 40px;
+            max-width: 600px;
+            line-height: 1.8;
+        }
+
+        /* Section Styling */
+        .section {
+            padding: 80px 0;
+        }
+
+       .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+            color: #1a1a2e;
+        }
+
+        .section-subtitle {
+            text-align: center;
+            font-size: 1.1rem;
+            color: #666;
+            margin-bottom: 60px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* Cards */
+        .card {
+            background: white;
+            border: none;
+            border-radius: 15px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            overflow: hidden;
+            margin-bottom: 30px;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+        }
+
+        .card-body {
+            padding: 30px;
+        }
+
+        .card-icon {
+            font-size: 3rem;
+            color: #667eea;
+            margin-bottom: 20px;
+            transition: transform 0.3s ease;
+        }
+
+        .card:hover {
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 0 20px 60px rgba(102, 126, 234, 0.2);
+}
+        .card-title {
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 15px;
+            color: #1a1a2e;
+        }
+
+        .card-text {
+            color: #666;
+            line-height: 1.8;
+        }
+
+        /* About Section */
+        .mission-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 60px;
+        }
+
+        .mission-card {
+            background: white;
+            padding: 40px;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .mission-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+        }
+
+        .mission-card h3 {
+            color: #1a1a2e;
+            margin-bottom: 20px;
+            font-size: 1.3rem;
+        }
+
+        .mission-card p {
+            color: #666;
+            line-height: 1.8;
+        }
+
+        /* Services Section */
+        .service-item {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            margin-bottom: 30px;
+        }
+
+        .service-item:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+        }
+
+        .service-header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 30px;
+            text-align: center;
+        }
+
+        .service-header i {
+            font-size: 3rem;
+            margin-bottom: 15px;
+            transition: transform 0.3s ease;
+        }
+
+        .service-item:hover .service-header i {
+            transform: rotate(10deg);
+        }
+        .service-header {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 30px;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.service-item:hover .service-header {
+    background: linear-gradient(135deg, #5a67d8 0%, #6b46c1 100%);
+}
+
+        .service-header h3 {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+        }
+
+        .service-content {
+            padding: 30px;
+        }
+
+        .service-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .service-list li {
+            padding: 8px 0;
+            border-bottom: 1px solid #eee;
+            position: relative;
+            padding-left: 20px;
+            transition: color 0.3s ease;
+        }
+
+        .service-list li:hover {
+            color: #667eea;
+        }
+
+        .service-list li:last-child {
+            border-bottom: none;
+        }
+
+        .service-list li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: #667eea;
+            font-weight: bold;
+        }
+
+        /* Contact Section */
+        .contact-info {
+            background: white;
+            border-radius: 15px;
+            padding: 40px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+            margin-bottom: 30px;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 30px;
+            transition: transform 0.3s ease;
+        }
+
+        .contact-item:hover {
+    transform: translateX(10px) translateY(-5px);
+    transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+        .contact-item:last-child {
+            margin-bottom: 0;
+        }
+
+        .contact-icon {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.5rem;
+            margin-right: 20px;
+            flex-shrink: 0;
+        }
+
+        .contact-details h5 {
+            color: #1a1a2e;
+            margin-bottom: 5px;
+            font-weight: 600;
+        }
+
+        .contact-details p {
+            color: #666;
+            margin: 0;
+        }
+
+        /* Footer */
+        .footer {
+            background: #1a1a2e;
+            color: white;
+            padding: 40px 0;
+            text-align: center;
+        }
+
+        .footer p {
+            margin: 0;
+            opacity: 0.8;
+        }
+
+        .footer small {
+            font-size: 0.9rem;
+            opacity: 0.6;
+        }
+
+        /* Scroll to Top Button */
+        .scroll-to-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            z-index: 1000;
+        }
+
+        .scroll-to-top.visible {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .scroll-to-top:hover {
+            transform: scale(1.1);
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero-title {
+                font-size: 2.5rem;
+            }
+
+            .hero-subtitle {
+                font-size: 1.1rem;
+            }
+
+            .cta-buttons {
+                justify-content: center;
+            }
+
+            .mission-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .contact-item {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .contact-icon {
+                margin-right: 0;
+                margin-bottom: 15px;
+            }
+
+            .scroll-to-top {
+                bottom: 20px;
+                right: 20px;
+                width: 40px;
+                height: 40px;
+                font-size: 1.2rem;
+            }
+        }
+        .cta-btn {
+    padding: 12px 30px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    background: #667eea;
+    color: #fff;
+    display: inline-block;
+}
+
+.cta-btn:hover {
+    background: #5a67d8;
+    color: #fff;
+}
+
+
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .animate-on-scroll {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.6s ease;
+        }
+
+        .animate-on-scroll.animate {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <img src="images/logo (2).png" alt="Trisaai Logo" class="logo-img">
+                Trisaai Engineering
+            </a>
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span style="color: #667eea;"><i class="fas fa-bars"></i></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="services.html">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="projects.html">Projects</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact Us</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Section -->
+        <section id="home" class="hero">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-12">
+                        <div class="hero-content">
+                            <p class="hero-welcome animate-on-scroll">Welcome to Trisaai Engineering Pte Ltd</p>
+                            <h1 class="hero-title animate-on-scroll">Your Vision, Our Mission</h1>
+                            <p class="hero-subtitle animate-on-scroll">Building tomorrow with trust, quality, and excellence</p>
+                            <div class="cta-buttons animate-on-scroll">
+                                <a href="about.html" class="cta-btn">Learn More</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Why Choose Us Section -->
+        <section id="why-choose-us" class="section">
+            <div class="container">
+                <h2 class="section-title animate-on-scroll">Why Choose Trisaai Engineering?</h2>
+                <p class="section-subtitle animate-on-scroll">We bring two decades of construction expertise to every project</p>
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="card animate-on-scroll">
+                            <div class="card-body text-center">
+                                <div class="card-icon">
+                                    <i class="fas fa-hard-hat"></i>
+                                </div>
+                                <h5 class="card-title">Expert Craftsmanship</h5>
+                                <p class="card-text">20+ years of experience in construction industry with proven track record of delivering quality projects on time.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card animate-on-scroll">
+                            <div class="card-body text-center">
+                                <div class="card-icon">
+                                    <i class="fas fa-leaf"></i>
+                                </div>
+                                <h5 class="card-title">Sustainable Practices</h5>
+                                <p class="card-text">Committed to environmental responsibility with eco-friendly materials and sustainable construction methods.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card animate-on-scroll">
+                            <div class="card-body text-center">
+                                <div class="card-icon">
+                                    <i class="fas fa-award"></i>
+                                </div>
+                                <h5 class="card-title">Quality Assurance</h5>
+                                <p class="card-text">BCA registered contractor with systematic quality management ensuring highest standards in every project.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="section">
+            <div class="container">
+                <h2 class="section-title animate-on-scroll">Building Tomorrow, Today</h2>
+                <p class="section-subtitle animate-on-scroll">Learn about our mission, vision, and commitment to excellence in construction</p>
+                <div class="mission-grid">
+                    <div class="mission-card animate-on-scroll">
+                        <h3><i class="fas fa-bullseye" style="color: #667eea; margin-right: 10px;"></i>Our Mission</h3>
+                        <p>We are committed to providing high-quality materials and the highest standards of construction services. We strive to meet customer expectations in cost, timely delivery, and quality, even in a challenging and changing environment.</p>
+                    </div>
+                    <div class="mission-card animate-on-scroll">
+                        <h3><i class="fas fa-rocket" style="color: #667eea; margin-right: 10px;"></i>Our Vision</h3>
+                        <p>To be recognized as a leading and modern construction company in Singapore through our innovative deliverables, sustainable practices, and technological advancement in the construction industry.</p>
+                    </div>
+                    <div class="mission-card animate-on-scroll">
+                        <h3><i class="fas fa-star" style="color: #667eea; margin-right: 10px;"></i>Quality Policy</h3>
+                        <p>We believe in systematic procedures and business processes, professionally implemented by our enthusiastic staff, ensuring high levels of quality work, customer service, and satisfaction.</p>
+                    </div>
+                    <div class="mission-card animate-on-scroll">
+                        <h3><i class="fas fa-seedling" style="color: #667eea; margin-right: 10px;"></i>Environmental Policy</h3>
+                        <p>We aim to minimize environmental impact by reducing waste and avoiding harmful materials. We fully comply with government environmental regulations and promote sustainable construction practices.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section id="services" class="section">
+            <div class="container">
+                <h2 class="section-title animate-on-scroll">Our Core Specializations</h2>
+                <p class="section-subtitle animate-on-scroll">Comprehensive construction services with expert craftsmanship and modern techniques</p>
+                <div class="row">
+                    <div class="col-lg-6">
+                        <div class="service-item animate-on-scroll">
+                            <div class="service-header">
+                                <i class="fas fa-building"></i>
+                                <h3>Civil Works</h3>
+                                <p>Complete building construction solutions</p>
+                            </div>
+                            <div class="service-content">
+                                <ul class="service-list">
+                                    <li>Building Works & Structural Construction</li>
+                                    <li>Drain Works & Water Management Systems</li>
+                                    <li>Reinforcement Works & Rebar Installation</li>
+                                    <li>Advanced Formwork Solutions</li>
+                                    <li>Precision Concrete Casting</li>
+                                    <li>Foundation & Excavation Works</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="service-item animate-on-scroll">
+                            <div class="service-header">
+                                <i class="fas fa-paint-brush"></i>
+                                <h3>Architectural Works</h3>
+                                <p>Expert finishing and architectural solutions</p>
+                            </div>
+                            <div class="service-content">
+                                <ul class="service-list">
+                                    <li>Professional Brickwork & Masonry</li>
+                                    <li>Advanced Plastering Techniques</li>
+                                    <li>Overcoat & Undercoat Applications</li>
+                                    <li>Premium Painting Solutions</li>
+                                    <li>Floor & Wall Tile Installation</li>
+                                    <li>Waterproofing Systems</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+       <!-- Contact Section -->
+<section id="contact" class="section">
+    <div class="container text-center">
+        <h2 class="section-title animate-on-scroll">Ready to Start Your Next Project?</h2>
+        <p class="section-subtitle animate-on-scroll">
+            Contact us today for a consultation and discover how we can bring your construction vision to life.
+        </p>
+        <a href="contact.html" class="cta-btn mt-4 animate-on-scroll">Get Started</a>
+    </div>
+</section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>© 2025 Trisaai Engineering Pte Ltd. All Rights Reserved.</p>
+            <p><small>UEN: 201410762R | BCA Registered Contractor – CR01 (Single Grade)</small></p>
+        </div>
+    </footer>
+
+    <!-- Scroll to Top Button -->
+    <div class="scroll-to-top">
+        <i class="fas fa-arrow-up"></i>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href').substring(1);
+                const targetElement = document.getElementById(targetId);
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+
+                // Update active nav link
+                document.querySelectorAll('.nav-link').forEach(link => link.classList.remove('active'));
+                this.classList.add('active');
+
+                // Close mobile menu if open
+                const navbarCollapse = document.querySelector('.navbar-collapse');
+                if (navbarCollapse.classList.contains('show')) {
+                    navbarCollapse.classList.remove('show');
+                }
+            });
+        });
+
+        // Navbar scroll effect
+        window.addEventListener('scroll', function() {
+            const navbar = document.querySelector('.navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+
+            // Scroll-to-top button visibility
+            const scrollToTop = document.querySelector('.scroll-to-top');
+            if (window.scrollY > 300) {
+                scrollToTop.classList.add('visible');
+            } else {
+                scrollToTop.classList.remove('visible');
+            }
+
+            // Update active nav link based on scroll position
+            const sections = document.querySelectorAll('section[id]');
+            let currentSection = '';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop - 100;
+                if (window.scrollY >= sectionTop) {
+                    currentSection = section.getAttribute('id');
+                }
+            });
+            document.querySelectorAll('.nav-link').forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href').substring(1) === currentSection) {
+                    link.classList.add('active');
+                }
+            });
+        });
+
+        // Scroll to top button functionality
+        document.querySelector('.scroll-to-top').addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+
+        // Animation on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver(function(entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.animate-on-scroll').forEach(element => {
+            observer.observe(element);
+        });
+
+        // Initialize animations on page load
+        document.addEventListener('DOMContentLoaded', function() {
+            document.querySelectorAll('.animate-on-scroll').forEach(element => {
+                const elementTop = element.offsetTop;
+                const elementBottom = elementTop + element.offsetHeight;
+                const viewportTop = window.scrollY;
+                const viewportBottom = viewportTop + window.innerHeight;
+                
+                if (elementBottom > viewportTop && elementTop < viewportBottom) {
+                    element.classList.add('animate');
+                }
+            });
+        });
+
+        // Mobile menu toggle
+        const navbarToggler = document.querySelector('.navbar-toggler');
+        const navbarCollapse = document.querySelector('.navbar-collapse');
+        
+        navbarToggler?.addEventListener('click', function() {
+            navbarCollapse.classList.toggle('show');
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,979 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Explore Trisaai Engineering Pte Ltd's portfolio of successful construction projects in Singapore. 20+ years of excellence in civil and architectural works.">
+    <title>Projects - Trisaai Engineering Pte Ltd</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="icon" href="images/favicon.png" type="image/png" sizes="64x64">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #f8f9fa;
+            position: relative;
+        }
+
+        /* Navigation */
+        .navbar {
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.04);
+            padding: 0.8rem 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .navbar.scrolled {
+            background: rgba(255, 255, 255, 0.95);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .navbar-brand {
+            display: flex;
+            align-items: center;
+            font-size: 1.7rem;
+            font-weight: 700;
+            color: #1a1a2e !important;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .logo-img {
+            width: 160px;
+            height: 160px;
+            margin-right: 12px;
+            border-radius: 8px;
+            margin-top: -45px;
+            margin-bottom: -45px;
+        }
+
+        @media (max-width: 768px) {
+            .logo-img {
+                width: 100px;
+                height: 100px;
+                margin-top: -15px;
+                margin-bottom: -15px;
+            }
+            
+            .navbar-brand {
+                font-size: 1.3rem;
+            }
+        }
+
+        .navbar-nav .nav-link {
+            color: #2c3e50 !important;
+            background-color: transparent;
+            font-weight: 500;
+            padding: 8px 18px;
+            margin: 0 6px;
+            border-radius: 10px;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .navbar-nav .nav-link:hover {
+            background-color: #eaf0ff;
+            color: #495057 !important;
+            box-shadow: 0 4px 12px rgba(102, 126, 234, 0.15);
+            transform: translateY(-2px);
+        }
+
+        .navbar-nav .nav-link.active {
+            background-color: #eaf0ff;
+            color: #667eea !important;
+            font-weight: 600;
+            box-shadow: 0 4px 12px rgba(102, 126, 234, 0.2);
+        }
+
+        .navbar-toggler {
+            border: none;
+            font-size: 1.4rem;
+            color: #667eea;
+            transition: transform 0.3s ease;
+        }
+
+        .navbar-toggler:focus {
+            box-shadow: none;
+        }
+
+        .navbar-toggler:hover {
+            transform: rotate(90deg);
+        }
+
+        /* Page Header */
+        .page-header {
+            background: linear-gradient(
+                rgba(20, 20, 20, 0.6),
+                rgba(20, 20, 20, 0.6)
+            ),
+            url('https://images.unsplash.com/photo-1504307651254-35680f356dfd?fm=jpg&q=60&w=3000') no-repeat center/cover;
+            min-height: 75vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: #fff;
+            position: relative;
+        }
+
+        .page-header-content {
+            background: rgba(255, 255, 255, 0.07);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            border-radius: 15px;
+            padding: 50px 30px;
+            max-width: 700px;
+            margin: 0 auto;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
+            animation: fadeInUp 1s ease forwards;
+            opacity: 0;
+            transform: translateY(30px);
+        }
+
+        .page-header h1 {
+            font-size: 3rem;
+            font-weight: 800;
+            margin-bottom: 20px;
+            color: #ffffff;
+        }
+
+        .page-header p {
+            font-size: 1.2rem;
+            color: #f0f0f0;
+            line-height: 1.8;
+        }
+
+        /* Animation */
+        @keyframes fadeInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .page-header h1 {
+                font-size: 2.2rem;
+            }
+
+            .page-header-content {
+                padding: 30px 20px;
+            }
+        }
+
+        /* Section Styling */
+        .section {
+            padding: 80px 0;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+            color: #1a1a2e;
+        }
+
+        .section-subtitle {
+            text-align: center;
+            font-size: 1.1rem;
+            color: #666;
+            margin-bottom: 60px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* Project Filter */
+        .project-filter {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .filter-btn {
+            background: #f8f9fa;
+            color: #667eea;
+            border: 2px solid #667eea;
+            padding: 12px 24px;
+            margin: 8px;
+            border-radius: 25px;
+            font-weight: 600;
+            text-decoration: none;
+            display: inline-block;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .filter-btn:hover, .filter-btn.active {
+            background: #667eea;
+            color: white;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(102, 126, 234, 0.3);
+        }
+
+        /* Project Cards */
+        .project-card {
+            background: white;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 15px 50px rgba(0, 0, 0, 0.1);
+            transition: all 0.4s ease;
+            margin-bottom: 40px;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .project-card:hover {
+            transform: translateY(-15px) scale(1.02);
+            box-shadow: 0 25px 80px rgba(102, 126, 234, 0.2);
+        }
+
+        .project-image {
+            position: relative;
+            height: 300px;
+            overflow: hidden;
+        }
+
+        .project-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.4s ease;
+        }
+
+        .project-card:hover .project-image img {
+            transform: scale(1.1);
+        }
+
+        .project-status {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 600;
+        }
+
+        .project-status.ongoing {
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+        }
+
+        .project-category {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            background: rgba(0, 0, 0, 0.7);
+            color: white;
+            padding: 6px 12px;
+            border-radius: 15px;
+            font-size: 0.8rem;
+            font-weight: 500;
+        }
+
+        .project-content {
+            padding: 30px;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .project-title {
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: #1a1a2e;
+            margin-bottom: 15px;
+        }
+
+        .project-location {
+            color: #667eea;
+            font-weight: 600;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+        }
+
+        .project-location i {
+            margin-right: 8px;
+        }
+
+        .project-description {
+            color: #666;
+            line-height: 1.8;
+            margin-bottom: 20px;
+            flex-grow: 1;
+        }
+
+        .project-details {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+            margin-bottom: 25px;
+            padding-top: 20px;
+            border-top: 1px solid #f0f0f0;
+        }
+
+        .detail-item {
+            display: flex;
+            align-items: center;
+            font-size: 0.9rem;
+        }
+
+        .detail-item i {
+            color: #667eea;
+            margin-right: 8px;
+            width: 16px;
+        }
+
+        .project-features {
+            margin-bottom: 20px;
+        }
+
+        .feature-tag {
+            display: inline-block;
+            background: #eaf0ff;
+            color: #667eea;
+            padding: 6px 12px;
+            border-radius: 15px;
+            font-size: 0.85rem;
+            margin: 4px 6px 4px 0;
+            font-weight: 500;
+        }
+
+        .project-footer {
+            margin-top: auto;
+            padding-top: 20px;
+            border-top: 1px solid #f0f0f0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .project-value {
+            font-weight: 700;
+            color: #1a1a2e;
+            font-size: 1.1rem;
+        }
+
+        .project-btn {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 10px 20px;
+            border-radius: 20px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.9rem;
+            transition: all 0.3s ease;
+        }
+
+        .project-btn:hover {
+            color: white;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(102, 126, 234, 0.4);
+        }
+
+        /* Stats Section */
+        .stats-section {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 80px 0;
+        }
+
+        .stat-card {
+            text-align: center;
+            padding: 30px;
+        }
+
+        .stat-number {
+            font-size: 3rem;
+            font-weight: 800;
+            margin-bottom: 10px;
+            display: block;
+        }
+
+        .stat-label {
+            font-size: 1.1rem;
+            opacity: 0.9;
+            font-weight: 500;
+        }
+
+        /* Testimonial Section */
+        .testimonial-card {
+            background: white;
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 15px 50px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            transition: all 0.4s ease;
+            height: 100%;
+        }
+
+        .testimonial-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 25px 80px rgba(102, 126, 234, 0.2);
+        }
+
+        .testimonial-content {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            margin-bottom: 30px;
+            color: #555;
+            font-style: italic;
+        }
+
+        .testimonial-author {
+            font-weight: 700;
+            color: #1a1a2e;
+            margin-bottom: 5px;
+        }
+
+        .testimonial-position {
+            color: #667eea;
+            font-size: 0.9rem;
+        }
+
+        /* Call to Action */
+        .cta-section {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 80px 0;
+            text-align: center;
+        }
+
+        .cta-section h2 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+
+        .cta-section p {
+            font-size: 1.2rem;
+            margin-bottom: 40px;
+            opacity: 0.9;
+        }
+
+        .cta-btn {
+            padding: 15px 40px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            background: #ffffff;
+            color: #667eea;
+            display: inline-block;
+            font-size: 1.1rem;
+        }
+
+        .cta-btn:hover {
+            background: #f8f9fa;
+            color: #5a67d8;
+            transform: translateY(-3px);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Footer */
+        .footer {
+            background: #1a1a2e;
+            color: white;
+            padding: 40px 0;
+            text-align: center;
+        }
+
+        .footer p {
+            margin: 0;
+            opacity: 0.8;
+        }
+
+        .footer small {
+            font-size: 0.9rem;
+            opacity: 0.6;
+        }
+
+        /* Scroll to Top */
+        .scroll-to-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            z-index: 1000;
+        }
+
+        .scroll-to-top.visible {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .scroll-to-top:hover {
+            transform: scale(1.1);
+        }
+
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .animate-on-scroll {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.6s ease;
+        }
+
+        .animate-on-scroll.animate {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Project filtering */
+        .project-item {
+            transition: all 0.4s ease;
+        }
+
+        .project-item.hidden {
+            opacity: 0;
+            transform: scale(0.8);
+            pointer-events: none;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .page-header h1 {
+                font-size: 2.5rem;
+            }
+
+            .page-header p {
+                font-size: 1.1rem;
+            }
+
+            .project-details {
+                grid-template-columns: 1fr;
+            }
+
+            .project-footer {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            .filter-btn {
+                margin: 4px;
+                padding: 8px 16px;
+                font-size: 0.9rem;
+            }
+
+            .scroll-to-top {
+                bottom: 20px;
+                right: 20px;
+                width: 40px;
+                height: 40px;
+                font-size: 1.2rem;
+            }
+
+            .stat-number {
+                font-size: 2.2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <img src="images/logo (2).png" loading="lazy" alt="Trisaai Logo" class="logo-img">
+                Trisaai Engineering
+            </a>
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-label="Toggle navigation">
+                <span style="color: #667eea;"><i class="fas fa-bars"></i></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="services.html">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="projects.html">Projects</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact Us</a>
+                    </li> 
+                </ul> 
+            </div> 
+        </div> 
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header d-flex align-items-center justify-content-center">
+        <div class="container text-center">
+            <div class="page-header-content animate-on-scroll">
+                <h1>Our Projects</h1>
+                <p>Showcasing two decades of construction excellence across Singapore with innovative solutions and quality craftsmanship.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Project Stats -->
+    <section class="stats-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 col-md-6">
+                    <div class="stat-card animate-on-scroll">
+                        <span class="stat-number">150+</span>
+                        <span class="stat-label">Projects Completed</span>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="stat-card animate-on-scroll">
+                        <span class="stat-number">20+</span>
+                        <span class="stat-label">Years Experience</span>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="stat-card animate-on-scroll">
+                        <span class="stat-number">100%</span>
+                        <span class="stat-label">Client Satisfaction</span>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="stat-card animate-on-scroll">
+                        <span class="stat-number">$50M+</span>
+                        <span class="stat-label">Total Project Value</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section class="section">
+        <div class="container">
+            <h2 class="section-title animate-on-scroll">Featured Projects</h2>
+            <p class="section-subtitle animate-on-scroll">Discover our portfolio of successful construction projects across Singapore</p>
+
+            <!-- Project Filter -->
+            <div class="project-filter animate-on-scroll">
+                <button class="filter-btn active" data-filter="all">All Projects</button>
+                <button class="filter-btn" data-filter="civil">Civil Works</button>
+                <button class="filter-btn" data-filter="architectural">Architectural</button>
+                <button class="filter-btn" data-filter="residential">Residential</button>
+                <button class="filter-btn" data-filter="commercial">Commercial</button>
+            </div>
+
+            <!-- Projects Grid -->
+            <div class="row">
+                <!-- Project 1 -->
+                <div class="col-lg-4 col-md-6 project-item" data-category="civil commercial">
+                    <div class="project-card animate-on-scroll">
+                        <div class="project-image">
+                            <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?fm=jpg&q=60&w=800" alt="Commercial Building Project" loading="lazy">
+                            <div class="project-status">Completed</div>
+                            <div class="project-category">Civil Works</div>
+                        </div>
+                        <div class="project-content">
+                            <h3 class="project-title">Marina Bay Commercial Complex</h3>
+                            <div class="project-location">
+                                <i class="fas fa-map-marker-alt"></i>
+                                Marina Bay, Singapore
+                            </div>
+                            <p class="project-description">
+                                A 15-story commercial complex featuring modern architectural design with comprehensive civil works including foundation, structural construction, and advanced building systems.
+                            </p>
+                            <div class="project-details">
+                                <div class="detail-item">
+                                    <i class="fas fa-calendar"></i>
+                                    <span>Duration: 18 months</span>
+                                </div>
+                                <div class="detail-item">
+                                    <i class="fas fa-building"></i>
+                                    <span>15 Floors</span>
+                                </div>
+                                <div class="detail-item">
+                                    <i class="fas fa-ruler-combined"></i>
+                                    <span>25,000 sqm</span>
+                                </div>
+                                <div class="detail-item">
+                                    <i class="fas fa-users"></i>
+                                    <span>50 Workers</span>
+                                </div>
+                            </div>
+                            <div class="project-features">
+                                <span class="feature-tag">Structural Works</span>
+                                <span class="feature-tag">Foundation</span>
+                                <span class="feature-tag">Concrete Casting</span>
+                                <span class="feature-tag">Reinforcement</span>
+                            </div>
+                            <div class="project-footer">
+                                <span class="project-value">$8.5M</span>
+                                <a href="#" class="project-btn">View Details</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="col-lg-4 col-md-6 project-item" data-category="architectural residential">
+                    <div class="project-card animate-on-scroll">
+                        <div class="project-image">
+                            <img src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?fm=jpg&q=60&w=800" alt="Luxury Residential Project" loading="lazy">
+                            <div class="project-status">Completed</div>
+                            <div class="project-category">Architectural</div>
+                        </div>
+                        <div class="project-content">
+                            <h3 class="project-title">Orchard Luxury Condominiums</h3>
+                            <div class="project-location">
+                                <i class="fas fa-map-marker-alt"></i>
+                                Orchard Road, Singapore
+                            </div>
+                            <p class="project-description">
+                                Premium residential development with sophisticated architectural finishes, luxury interiors, and high-end building systems including waterproofing and premium tiling work.
+                            </p>
+                            <div class="project-details">
+                                <div class="detail-item">
+                                    <i class="fas fa-calendar"></i>
+                                    <span>Duration: 24 months</span>
+                                </div>
+                                <div class="detail-item">
+                                    <i class="fas fa-home"></i>
+                                    <span>120 Units</span>
+                                </div>
+                                <div class="detail-item">
+                                    <i class="fas fa-ruler-combined"></i>
+                                    <span>18,000 sqm</span>
+                                </div>
+                                <div class="detail-item">
+                                    <i class="fas fa-users"></i>
+                                    <span>40 Workers</span>
+                                </div>
+                            </div>
+                            <div class="project-features">
+                                <span class="feature-tag">Premium Finishes</span>
+                                <span class="feature-tag">Waterproofing</span>
+                                <span class="feature-tag">Luxury Tiling</span>
+                                <span class="feature-tag">Plastering</span>
+                            </div>
+                            <div class="project-footer">
+                                <span class="project-value">$12.3M</span>
+                                <a href="#" class="project-btn">View Details</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="col-lg-4 col-md-6 project-item" data-category="civil commercial">
+                    <div class="project-card animate-on-scroll">
+                        <div class="project-image">
+                            <img src="https://images.unsplash.com/photo-1583608205776-bfd35f0d9f83?fm=jpg&q=60&w=800" alt="Office Complex Project" loading="lazy">
+                            <div class="project-status ongoing">Ongoing</div>
+                            <div class="project-category">Civil Works</div>
+                        </div>
+                        <div class="project-content">
+                            <h3 class="project-title">Jurong Industrial Hub</h3>
+                            <div class="project-location">
+                                <i class="fas fa-map-marker-alt"></i>
+                                Jurong West, Singapore
+                            </div>
+                            <p class="project-description">
+                                Large-scale industrial facility with specialized foundation work, heavy-duty structural construction, and advanced drainage systems for manufacturing operations.
+                            </p>
+                            <div class="project-details">
+                                <div class="detail-item">
+                                    <i class="fas fa-calendar"></i>
+                                    <span>Duration: 20 months</span>
+                                </div>
+                                <div class="detail-item">
+                                    <i class="fas fa-industry"></i>
+                                    <span>Industrial</span>
+                                </div>
+                                <div class="detail-item">
+                                    <i class="fas fa-ruler-combined"></i>
+                                    <span>35,000 sqm</span>
+                                </div>
+                                <div class="detail-item">
+                                    <i class="fas fa-users"></i>
+                                    <span>60 Workers</span>
+                                </div>
+                            </div>
+                            <div class="project-features">
+                                <span class="feature-tag">Heavy Foundation</span>
+                                <span class="feature-tag">Drainage Systems</span>
+                                <span class="feature-tag">Industrial Flooring</span>
+                                <span class="feature-tag">Structural Steel</span>
+                            </div>
+                            <div class="project-footer">
+                                <span class="project-value">$15.7M</span>
+                                <a href="#" class="project-btn">View Progress</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 4 -->
+                <div class="col-lg-4 col-md-6 project-item" data-category="architectural residential">
+                    <div class="project-card animate-on-scroll">
+                        <div class="project-image">
+                            <img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?fm=jpg&q=60&w=800" alt="Modern Apartment Project">
+                                                        <div class="project-status">Completed</div>
+                            <div class="project-category">Residential</div>
+                        </div>
+                        <div class="project-content">
+                            <h3 class="project-title">Punggol Modern Apartments</h3>
+                            <div class="project-location">
+                                <i class="fas fa-map-marker-alt"></i>
+                                Punggol, Singapore
+                            </div>
+                            <p class="project-description">
+                                A residential complex featuring modern architecture, efficient space planning, and sustainable green building practices, designed for family living.
+                            </p>
+                            <div class="project-details">
+                                <div class="detail-item">
+                                    <i class="fas fa-calendar"></i>
+                                    <span>Duration: 16 months</span>
+                                </div>
+                                <div class="detail-item">
+                                    <i class="fas fa-home"></i>
+                                    <span>80 Units</span>
+                                </div>
+                                <div class="detail-item">
+                                    <i class="fas fa-ruler-combined"></i>
+                                    <span>12,000 sqm</span>
+                                </div>
+                                <div class="detail-item">
+                                    <i class="fas fa-users"></i>
+                                    <span>35 Workers</span>
+                                </div>
+                            </div>
+                            <div class="project-features">
+                                <span class="feature-tag">Green Building</span>
+                                <span class="feature-tag">Energy Efficient</span>
+                                <span class="feature-tag">Smart Interiors</span>
+                                <span class="feature-tag">Modern Architecture</span>
+                            </div>
+                            <div class="project-footer">
+                                <span class="project-value">$7.9M</span>
+                                <a href="#" class="project-btn">View Details</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="cta-section">
+        <div class="container">
+            <h2 class="animate-on-scroll">Have a Project in Mind?</h2>
+            <p class="animate-on-scroll">Let’s collaborate to bring your vision to life with Trisaai Engineering’s expertise.</p>
+            <a href="contact.html" class="cta-btn animate-on-scroll">Contact Us Today</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Trisaai Engineering Pte Ltd. All Rights Reserved.</p>
+            <small>Built with passion and precision.</small>
+        </div>
+    </footer>
+
+    <!-- Scroll to Top -->
+    <div class="scroll-to-top" id="scrollToTop">
+        <i class="fas fa-chevron-up"></i>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+    <script>
+        const scrollToTop = document.getElementById("scrollToTop");
+
+        window.addEventListener("scroll", function() {
+            if (window.pageYOffset > 300) {
+                scrollToTop.classList.add("visible");
+            } else {
+                scrollToTop.classList.remove("visible");
+            }
+        });
+
+        scrollToTop.addEventListener("click", function() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+
+        // Animate on scroll
+        const animatedElements = document.querySelectorAll(".animate-on-scroll");
+
+        function animateOnScroll() {
+            animatedElements.forEach(el => {
+                if (el.getBoundingClientRect().top < window.innerHeight - 100) {
+                    el.classList.add("animate");
+                }
+            });
+        }
+        window.addEventListener("scroll", animateOnScroll);
+        animateOnScroll();
+
+        // Filtering
+        const filterBtns = document.querySelectorAll(".filter-btn");
+        const projectItems = document.querySelectorAll(".project-item");
+
+        filterBtns.forEach(btn => {
+            btn.addEventListener("click", function() {
+                filterBtns.forEach(b => b.classList.remove("active"));
+                this.classList.add("active");
+                const filter = this.getAttribute("data-filter");
+
+                projectItems.forEach(item => {
+                    const categories = item.getAttribute("data-category").split(" ");
+                    if (filter === "all" || categories.includes(filter)) {
+                        item.classList.remove("hidden");
+                    } else {
+                        item.classList.add("hidden");
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,1046 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Contact Trisaai Engineering Pte Ltd - Get in touch for construction, civil works, and architectural solutions in Singapore. Professional consultation available.">
+    
+    <title>Contact Us - Trisaai Engineering Pte Ltd</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="icon" href="images/favicon.png" type="image/png" sizes="64x64">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #f8f9fa;
+            position: relative;
+        }
+
+        /* Navigation - Same as main page */
+        .navbar {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+            padding: 0.8rem 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .navbar-brand {
+            display: flex;
+            align-items: center;
+            font-size: 1.7rem;
+            font-weight: 700;
+            color: #1a1a2e !important;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .logo-img {
+            width: 160px;
+            height: 160px;
+            margin-right: 12px;
+            border-radius: 8px;
+            margin-top: -45px;
+            margin-bottom: -45px;
+        }
+
+        @media (max-width: 768px) {
+            .logo-img {
+                width: 100px;
+                height: 100px;
+                margin-top: -15px;
+                margin-bottom: -15px;
+            }
+            
+            .navbar-brand {
+                font-size: 1.3rem;
+            }
+        }
+
+        .navbar-nav .nav-link {
+            color: #2c3e50 !important;
+            background-color: transparent;
+            font-weight: 500;
+            padding: 8px 18px;
+            margin: 0 6px;
+            border-radius: 10px;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .navbar-nav .nav-link:hover {
+            background-color: #eaf0ff;
+            color: #495057 !important;
+            box-shadow: 0 4px 12px rgba(102, 126, 234, 0.15);
+            transform: translateY(-2px);
+        }
+
+        .navbar-nav .nav-link.active {
+            background-color: #eaf0ff;
+            color: #667eea !important;
+            font-weight: 600;
+            box-shadow: 0 4px 12px rgba(102, 126, 234, 0.2);
+        }
+
+        .navbar-toggler {
+            border: none;
+            font-size: 1.4rem;
+            color: #667eea;
+            transition: transform 0.3s ease;
+        }
+
+        .navbar-toggler:focus {
+            box-shadow: none;
+        }
+
+        .navbar-toggler:hover {
+            transform: rotate(90deg);
+        }
+
+        /* Page Header */
+        .page-header {
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), 
+                        url('https://images.unsplash.com/photo-1423666639041-f56000c27a9a?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0') center/cover;
+            color: white;
+            padding: 150px 0 100px;
+            text-align: center;
+            margin-top: 70px;
+        }
+
+        .page-header h1 {
+            font-size: 3rem;
+            font-weight: 900;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7);
+        }
+
+        .page-header p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* Contact Section */
+        .contact-section {
+            padding: 80px 0;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+            color: #1a1a2e;
+        }
+
+        .section-subtitle {
+            text-align: center;
+            font-size: 1.1rem;
+            color: #666;
+            margin-bottom: 60px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* Contact Info Cards */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            padding: 50px 0;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Section Header */
+        .section-title {
+            text-align: center;
+            font-size: 3rem;
+            font-weight: 700;
+            color: #1a1a2e;
+            margin-bottom: 15px;
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border-radius: 2px;
+        }
+
+        .section-subtitle {
+            text-align: center;
+            font-size: 1.2rem;
+            color: #666;
+            margin-bottom: 60px;
+        }
+
+        /* Grid Layout */
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+
+        /* Contact Info Cards */
+        .contact-info-card {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 35px;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .contact-info-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 5px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            transform: scaleX(0);
+            transition: transform 0.3s ease;
+        }
+
+        .contact-info-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .contact-info-card:hover {
+            transform: translateY(-15px);
+            box-shadow: 0 25px 50px rgba(102, 126, 234, 0.25);
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 20px;
+        }
+
+        .contact-icon {
+            width: 70px;
+            height: 70px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.8rem;
+            flex-shrink: 0;
+            box-shadow: 0 10px 20px rgba(102, 126, 234, 0.3);
+            transition: all 0.3s ease;
+        }
+
+        .contact-info-card:hover .contact-icon {
+            transform: scale(1.1) rotate(5deg);
+            box-shadow: 0 15px 30px rgba(102, 126, 234, 0.4);
+        }
+
+        .contact-details {
+            flex: 1;
+            padding-top: 5px;
+        }
+
+        .contact-details h5 {
+            color: #1a1a2e;
+            margin-bottom: 10px;
+            font-weight: 700;
+            font-size: 1.3rem;
+            letter-spacing: -0.5px;
+        }
+
+        .contact-details p {
+            color: #555;
+            margin: 0;
+            line-height: 1.6;
+            font-size: 1rem;
+        }
+
+        .contact-details a {
+            color: #667eea;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .contact-details a::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            transition: width 0.3s ease;
+        }
+
+        .contact-details a:hover::after {
+            width: 100%;
+        }
+
+        .contact-details a:hover {
+            color: #5a67d8;
+            transform: translateX(5px);
+        }
+
+        /* Special styling for address card */
+        .address-fix {
+            margin-bottom: 8px;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .contact-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+
+            .section-title {
+                font-size: 2.5rem;
+            }
+
+            .contact-info-card {
+                padding: 25px;
+            }
+
+            .contact-icon {
+                width: 60px;
+                height: 60px;
+                font-size: 1.5rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .section-title {
+                font-size: 2rem;
+            }
+
+            .contact-item {
+                flex-direction: column;
+                text-align: center;
+                gap: 15px;
+            }
+
+            .contact-details {
+                padding-top: 0;
+            }
+        }
+
+        /* Animation */
+        .animate-on-scroll {
+            opacity: 0;
+            transform: translateY(30px);
+            animation: fadeInUp 0.8s ease forwards;
+        }
+
+        @keyframes fadeInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .contact-info-card:nth-child(1) { animation-delay: 0.1s; }
+        .contact-info-card:nth-child(2) { animation-delay: 0.2s; }
+        .contact-info-card:nth-child(3) { animation-delay: 0.3s; }
+        .contact-info-card:nth-child(4) { animation-delay: 0.4s; }
+        .contact-info-card:nth-child(5) { animation-delay: 0.5s; }
+        .contact-info-card:nth-child(6) { animation-delay: 0.6s; }
+
+        /* Contact Form */
+        .contact-form {
+            background: white;
+            border-radius: 15px;
+            padding: 40px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+        }
+
+        .form-group {
+            margin-bottom: 25px;
+        }
+
+        .form-label {
+            font-weight: 600;
+            color: #1a1a2e;
+            margin-bottom: 8px;
+        }
+
+        .form-control {
+            border: 2px solid #e9ecef;
+            border-radius: 10px;
+            padding: 15px 20px;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+            background: #f8f9fa;
+        }
+
+        .form-control:focus {
+            border-color: #667eea;
+            box-shadow: 0 0 0 0.2rem rgba(102, 126, 234, 0.25);
+            background: white;
+        }
+
+        .form-control.is-invalid {
+            border-color: #dc3545;
+        }
+
+        .form-control.is-valid {
+            border-color: #28a745;
+        }
+
+        .invalid-feedback {
+            color: #dc3545;
+            font-size: 0.875rem;
+            margin-top: 5px;
+        }
+
+        .btn-submit {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border: none;
+            padding: 15px 40px;
+            border-radius: 25px;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+            width: 100%;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .btn-submit:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(102, 126, 234, 0.4);
+            background: linear-gradient(135deg, #5a67d8 0%, #6b46c1 100%);
+        }
+
+        .btn-submit:disabled {
+            opacity: 0.7;
+            cursor: not-allowed;
+            transform: none;
+        }
+
+        /* Loading spinner */
+        .spinner {
+            display: none;
+            width: 20px;
+            height: 20px;
+            border: 2px solid #ffffff40;
+            border-top: 2px solid #ffffff;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+            margin-right: 10px;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        /* Success/Error Messages */
+        .alert {
+            border-radius: 10px;
+            padding: 15px 20px;
+            margin-bottom: 25px;
+            border: none;
+        }
+
+        .alert-success {
+            background: linear-gradient(135deg, #d4edda, #c3e6cb);
+            color: #155724;
+            border-left: 4px solid #28a745;
+        }
+
+        .alert-danger {
+            background: linear-gradient(135deg, #f8d7da, #f5c6cb);
+            color: #721c24;
+            border-left: 4px solid #dc3545;
+        }
+
+        /* Map Section */
+        .map-section {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+            margin-top: 40px;
+        }
+
+        .map-header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 20px 30px;
+            text-align: center;
+        }
+
+        .map-container {
+            height: 400px;
+            width: 100%;
+            border: none;
+        }
+
+        /* Footer */
+        .footer {
+            background: #1a1a2e;
+            color: white;
+            padding: 40px 0;
+            text-align: center;
+            margin-top: 80px;
+        }
+
+        .footer p {
+            margin: 0;
+            opacity: 0.8;
+        }
+
+        .footer small {
+            font-size: 0.9rem;
+            opacity: 0.6;
+        }
+
+        /* Scroll to Top Button */
+        .scroll-to-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            z-index: 1000;
+        }
+
+        .scroll-to-top.visible {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .scroll-to-top:hover {
+            transform: scale(1.1);
+        }
+
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .animate-on-scroll {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.6s ease;
+        }
+
+        .animate-on-scroll.animate {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .page-header h1 {
+                font-size: 2.5rem;
+            }
+
+            .contact-item {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .contact-icon {
+                margin-right: 0;
+                margin-bottom: 15px;
+            }
+
+            .scroll-to-top {
+                bottom: 20px;
+                right: 20px;
+                width: 40px;
+                height: 40px;
+                font-size: 1.2rem;
+            }
+
+            .contact-form {
+                padding: 30px 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <img src="images/logo (2).png" alt="Trisaai Logo" class="logo-img">
+                Trisaai Engineering
+            </a>
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span style="color: #667eea;"><i class="fas fa-bars"></i></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="services.html">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="projects.html">Projects</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="contact.html">Contact Us</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1 class="animate-on-scroll">Get In Touch</h1>
+            <p class="animate-on-scroll">Ready to start your next construction project? Contact our expert team today for professional consultation and quality service.</p>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+     <section class="contact-section">
+        <div class="container">
+            <h2 class="section-title animate-on-scroll">Contact Information</h2>
+            <p class="section-subtitle animate-on-scroll">Multiple ways to reach us for your convenience</p>
+            
+            <div class="contact-grid">
+                <!-- Office Address -->
+                <div class="contact-info-card animate-on-scroll">
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h5>Office Address</h5>
+                            <p class="address-fix">3 New Industrial Road</p>
+                            <p>10 Buroh Street<br>#05-42, West Connect Building<br>Singapore - 627564</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Phone Number -->
+                <div class="contact-info-card animate-on-scroll">
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h5>Phone Number</h5>
+                            <p><a href="tel:+6568448363">+65 6844 8363</a></p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Email Address -->
+                <div class="contact-info-card animate-on-scroll">
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h5>Email Address</h5>
+                            <p><a href="mailto:info@trisaai.com">info@trisaai.com</a></p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Business Hours -->
+                <div class="contact-info-card animate-on-scroll">
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h5>Business Hours</h5>
+                            <p>Monday - Friday: 9:00 AM - 6:00 PM<br>
+                            Saturday: 9:00 AM - 1:00 PM<br>
+                            Sunday: Closed</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Registration -->
+                <div class="contact-info-card animate-on-scroll">
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-certificate"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h5>Registration</h5>
+                            <p>UEN: 201410762R<br>
+                            BCA Registered Contractor<br>
+                            CR01 (Single Grade)</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Emergency Contact -->
+                <div class="contact-info-card animate-on-scroll">
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-handshake"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h5>Emergency Contact</h5>
+                            <p>24/7 Emergency Support<br>
+                            For urgent matters only<br>
+                            <a href="tel:+6568448363">+65 6844 8363</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+            <!-- Contact Form -->
+            <div class="row mt-5">
+                <div class="col-lg-8 mx-auto">
+                    <div class="contact-form animate-on-scroll">
+                        <h3 class="text-center mb-4">Send Us a Message</h3>
+                        
+                        <div id="form-messages"></div>
+                        
+                        <form id="contact-form" action="https://formspree.io/f/xeozekap" method="POST">
+
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="firstName" class="form-label">First Name *</label>
+                                        <input type="text" class="form-control" id="firstName" name="firstName" required>
+                                        <div class="invalid-feedback">Please enter your first name.</div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="lastName" class="form-label">Last Name *</label>
+                                        <input type="text" class="form-control" id="lastName" name="lastName" required>
+                                        <div class="invalid-feedback">Please enter your last name.</div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="email" class="form-label">Email Address *</label>
+                                        <input type="email" class="form-control" id="email" name="email" required>
+                                        <div class="invalid-feedback">Please enter a valid email address.</div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="phone" class="form-label">Phone Number</label>
+                                        <input type="tel" class="form-control" id="phone" name="phone">
+                                        <div class="invalid-feedback">Please enter a valid phone number.</div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="company" class="form-label">Company/Organization</label>
+                                <input type="text" class="form-control" id="company" name="company">
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="service" class="form-label">Service of Interest</label>
+                                <select class="form-control" id="service" name="service">
+                                    <option value="">Select a service...</option>
+                                    <option value="civil-works">Civil Works</option>
+                                    <option value="building-construction">Building Construction</option>
+                                    <option value="architectural-works">Architectural Works</option>
+                                    <option value="renovation">Renovation</option>
+                                    <option value="consultation">Consultation</option>
+                                    <option value="other">Other</option>
+                                </select>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="subject" class="form-label">Subject *</label>
+                                <input type="text" class="form-control" id="subject" name="subject" required>
+                                <div class="invalid-feedback">Please enter a subject.</div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="message" class="form-label">Message *</label>
+                                <textarea class="form-control" id="message" name="message" rows="6" required placeholder="Please provide details about your project, timeline, and any specific requirements..."></textarea>
+                                <div class="invalid-feedback">Please enter your message.</div>
+                            </div>
+                            
+                            <div class="text-center">
+                                <button type="submit" class="btn-submit">
+                                    <span class="spinner"></span>
+                                    <span class="btn-text">Send Message</span>
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Map Section -->
+            <div class="map-section animate-on-scroll">
+                <div class="map-header">
+                    <h4><i class="fas fa-map-marked-alt me-2"></i>Find Us on the Map</h4>
+                    <p class="mb-0">Located at West Connect Building, easily accessible by public transport</p>
+
+                </div>
+                <iframe 
+    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3988.704226081327!2d103.71839421504398!3d1.3155864620619985!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31da1a5c600e711f%3A0x31179bd2d5efec86!2s10%20Buroh%20Street%2C%20West%20Connect%20Building%2C%20Singapore%20627564!5e0!3m2!1sen!2ssg!4v1721452890000!5m2!1sen!2ssg"
+    class="map-container"
+    allowfullscreen=""
+    loading="lazy"
+    referrerpolicy="no-referrer-when-downgrade">
+</iframe>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+  <div class="container">
+    <p>&copy; 2025 Trisaai Engineering Pte Ltd. All rights reserved.</p>
+    <small>10 Buroh Street, #05-42, Singapore - 627564</small>
+  </div>
+</footer>
+
+    <!-- Scroll to Top Button -->
+    <div class="scroll-to-top">
+        <i class="fas fa-arrow-up"></i>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Form handling
+        document.addEventListener('DOMContentLoaded', function() {
+            const form = document.getElementById('contact-form');
+            const submitBtn = form.querySelector('.btn-submit');
+            const spinner = form.querySelector('.spinner');
+            const btnText = form.querySelector('.btn-text');
+            const messagesDiv = document.getElementById('form-messages');
+
+            // Form validation
+            function validateForm() {
+                let isValid = true;
+                const requiredFields = form.querySelectorAll('[required]');
+                
+                requiredFields.forEach(field => {
+                    field.classList.remove('is-invalid', 'is-valid');
+                    
+                    if (field.type === 'email') {
+                        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                        if (!emailRegex.test(field.value.trim())) {
+                            field.classList.add('is-invalid');
+                            isValid = false;
+                        } else {
+                            field.classList.add('is-valid');
+                        }
+                    } else if (!field.value.trim()) {
+                        field.classList.add('is-invalid');
+                        isValid = false;
+                    } else {
+                        field.classList.add('is-valid');
+                    }
+                });
+                
+                return isValid;
+            }
+
+            // Real-time validation
+            form.querySelectorAll('input, textarea, select').forEach(field => {
+                field.addEventListener('blur', function() {
+                    if (this.hasAttribute('required')) {
+                        this.classList.remove('is-invalid', 'is-valid');
+                        
+                        if (this.type === 'email') {
+                            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                            if (emailRegex.test(this.value.trim())) {
+                                this.classList.add('is-valid');
+                            } else if (this.value.trim()) {
+                                this.classList.add('is-invalid');
+                            }
+                        } else if (this.value.trim()) {
+                            this.classList.add('is-valid');
+                        }
+                    }
+                });
+            });
+
+            // Form submission
+            form.addEventListener('submit', async function(e) {
+                e.preventDefault();
+                
+                if (!validateForm()) {
+                    showMessage('Please fill in all required fields correctly.', 'danger');
+                    return;
+                }
+                
+                // Show loading state
+                submitBtn.disabled = true;
+                spinner.style.display = 'inline-block';
+                btnText.textContent = 'Sending...';
+                
+                try {
+                    // Note: Replace 'YOUR_FORM_ID' with your actual Formspree form ID
+                    const response = await fetch(form.action, {
+                        method: 'POST',
+                        body: new FormData(form),
+                        headers: {
+                            'Accept': 'application/json'
+                        }
+                    });
+                    
+                    if (response.ok) {
+                        showMessage('Thank you! Your message has been sent successfully. We\'ll get back to you soon.', 'success');
+                        form.reset();
+                        form.querySelectorAll('.is-valid').forEach(field => {
+                            field.classList.remove('is-valid');
+                        });
+                    } else {
+                        throw new Error('Form submission failed');
+                    }
+                } catch (error) {
+                    showMessage('Sorry, there was an error sending your message. Please try again or contact us directly.', 'danger');
+                } finally {
+                    // Reset button state
+                    submitBtn.disabled = false;
+                    spinner.style.display = 'none';
+                    btnText.textContent = 'Send Message';
+                }
+            });
+
+            function showMessage(message, type) {
+                messagesDiv.innerHTML = `
+                    <div class="alert alert-${type}" role="alert">
+                        <i class="fas fa-${type === 'success' ? 'check-circle' : 'exclamation-circle'} me-2"></i>
+                        ${message}
+                    </div>
+                `;
+                                    messagesDiv.scrollIntoView({ behavior: 'smooth' });
+            }
+
+            // Scroll animations
+            const observer = new IntersectionObserver(entries => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('animate');
+                    }
+                });
+            }, {
+                threshold: 0.1
+            });
+
+            document.querySelectorAll('.animate-on-scroll').forEach(element => {
+                observer.observe(element);
+            });
+        });
+
+        // Scroll to top button
+        const scrollBtn = document.querySelector('.scroll-to-top');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 300) {
+                scrollBtn.classList.add('visible');
+            } else {
+                scrollBtn.classList.remove('visible');
+            }
+        });
+
+        scrollBtn.addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+        
+const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+const navLinks = document.querySelector('.navbar-nav');
+
+mobileMenuBtn.addEventListener('click', () => {
+    navLinks.style.display = navLinks.style.display === 'flex' ? 'none' : 'flex';
+});
+const form = document.getElementById('contact-form');
+    form.addEventListener('submit', function(e) {
+        let valid = true;
+        const requiredFields = ['firstName', 'lastName', 'email', 'subject', 'message'];
+        requiredFields.forEach(id => {
+            const input = document.getElementById(id);
+            if (!input.value.trim()) {
+                input.classList.add('is-invalid');
+                valid = false;
+            } else {
+                input.classList.remove('is-invalid');
+            }
+        });
+        if (!valid) {
+            e.preventDefault();
+        }
+    });
+
+
+
+    </script>
+    
+</body>
+</html>
