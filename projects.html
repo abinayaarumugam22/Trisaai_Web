@@ -54,7 +54,7 @@
         .logo-img {
             width: 160px;
             height: 160px;
-            margin-right: 12px;
+            margin-right: -20px;
             border-radius: 8px;
             margin-top: -45px;
             margin-bottom: -45px;
@@ -390,12 +390,13 @@
             box-shadow: 0 8px 20px rgba(102, 126, 234, 0.4);
         }
 
-        /* Stats Section */
         .stats-section {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            padding: 80px 0;
-        }
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 80px 0;
+    margin-bottom: 60px; /* ✅ Adds white space below */
+}
+
 
         .stat-card {
             text-align: center;
@@ -660,7 +661,7 @@
             <div class="row">
                 <div class="col-lg-3 col-md-6">
                     <div class="stat-card animate-on-scroll">
-                        <span class="stat-number">150+</span>
+                        <span class="stat-number">50+</span>
                         <span class="stat-label">Projects Completed</span>
                     </div>
                 </div>
@@ -678,7 +679,7 @@
                 </div>
                 <div class="col-lg-3 col-md-6">
                     <div class="stat-card animate-on-scroll">
-                        <span class="stat-number">$50M+</span>
+                        <span class="stat-number">$10M+</span>
                         <span class="stat-label">Total Project Value</span>
                     </div>
                 </div>
@@ -686,221 +687,7 @@
         </div>
     </section>
 
-    <!-- Projects Section -->
-    <section class="section">
-        <div class="container">
-            <h2 class="section-title animate-on-scroll">Featured Projects</h2>
-            <p class="section-subtitle animate-on-scroll">Discover our portfolio of successful construction projects across Singapore</p>
-
-            <!-- Project Filter -->
-            <div class="project-filter animate-on-scroll">
-                <button class="filter-btn active" data-filter="all">All Projects</button>
-                <button class="filter-btn" data-filter="civil">Civil Works</button>
-                <button class="filter-btn" data-filter="architectural">Architectural</button>
-                <button class="filter-btn" data-filter="residential">Residential</button>
-                <button class="filter-btn" data-filter="commercial">Commercial</button>
-            </div>
-
-            <!-- Projects Grid -->
-            <div class="row">
-                <!-- Project 1 -->
-                <div class="col-lg-4 col-md-6 project-item" data-category="civil commercial">
-                    <div class="project-card animate-on-scroll">
-                        <div class="project-image">
-                            <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?fm=jpg&q=60&w=800" alt="Commercial Building Project" loading="lazy">
-                            <div class="project-status">Completed</div>
-                            <div class="project-category">Civil Works</div>
-                        </div>
-                        <div class="project-content">
-                            <h3 class="project-title">Marina Bay Commercial Complex</h3>
-                            <div class="project-location">
-                                <i class="fas fa-map-marker-alt"></i>
-                                Marina Bay, Singapore
-                            </div>
-                            <p class="project-description">
-                                A 15-story commercial complex featuring modern architectural design with comprehensive civil works including foundation, structural construction, and advanced building systems.
-                            </p>
-                            <div class="project-details">
-                                <div class="detail-item">
-                                    <i class="fas fa-calendar"></i>
-                                    <span>Duration: 18 months</span>
-                                </div>
-                                <div class="detail-item">
-                                    <i class="fas fa-building"></i>
-                                    <span>15 Floors</span>
-                                </div>
-                                <div class="detail-item">
-                                    <i class="fas fa-ruler-combined"></i>
-                                    <span>25,000 sqm</span>
-                                </div>
-                                <div class="detail-item">
-                                    <i class="fas fa-users"></i>
-                                    <span>50 Workers</span>
-                                </div>
-                            </div>
-                            <div class="project-features">
-                                <span class="feature-tag">Structural Works</span>
-                                <span class="feature-tag">Foundation</span>
-                                <span class="feature-tag">Concrete Casting</span>
-                                <span class="feature-tag">Reinforcement</span>
-                            </div>
-                            <div class="project-footer">
-                                <span class="project-value">$8.5M</span>
-                                <a href="#" class="project-btn">View Details</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Project 2 -->
-                <div class="col-lg-4 col-md-6 project-item" data-category="architectural residential">
-                    <div class="project-card animate-on-scroll">
-                        <div class="project-image">
-                            <img src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?fm=jpg&q=60&w=800" alt="Luxury Residential Project" loading="lazy">
-                            <div class="project-status">Completed</div>
-                            <div class="project-category">Architectural</div>
-                        </div>
-                        <div class="project-content">
-                            <h3 class="project-title">Orchard Luxury Condominiums</h3>
-                            <div class="project-location">
-                                <i class="fas fa-map-marker-alt"></i>
-                                Orchard Road, Singapore
-                            </div>
-                            <p class="project-description">
-                                Premium residential development with sophisticated architectural finishes, luxury interiors, and high-end building systems including waterproofing and premium tiling work.
-                            </p>
-                            <div class="project-details">
-                                <div class="detail-item">
-                                    <i class="fas fa-calendar"></i>
-                                    <span>Duration: 24 months</span>
-                                </div>
-                                <div class="detail-item">
-                                    <i class="fas fa-home"></i>
-                                    <span>120 Units</span>
-                                </div>
-                                <div class="detail-item">
-                                    <i class="fas fa-ruler-combined"></i>
-                                    <span>18,000 sqm</span>
-                                </div>
-                                <div class="detail-item">
-                                    <i class="fas fa-users"></i>
-                                    <span>40 Workers</span>
-                                </div>
-                            </div>
-                            <div class="project-features">
-                                <span class="feature-tag">Premium Finishes</span>
-                                <span class="feature-tag">Waterproofing</span>
-                                <span class="feature-tag">Luxury Tiling</span>
-                                <span class="feature-tag">Plastering</span>
-                            </div>
-                            <div class="project-footer">
-                                <span class="project-value">$12.3M</span>
-                                <a href="#" class="project-btn">View Details</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Project 3 -->
-                <div class="col-lg-4 col-md-6 project-item" data-category="civil commercial">
-                    <div class="project-card animate-on-scroll">
-                        <div class="project-image">
-                            <img src="https://images.unsplash.com/photo-1583608205776-bfd35f0d9f83?fm=jpg&q=60&w=800" alt="Office Complex Project" loading="lazy">
-                            <div class="project-status ongoing">Ongoing</div>
-                            <div class="project-category">Civil Works</div>
-                        </div>
-                        <div class="project-content">
-                            <h3 class="project-title">Jurong Industrial Hub</h3>
-                            <div class="project-location">
-                                <i class="fas fa-map-marker-alt"></i>
-                                Jurong West, Singapore
-                            </div>
-                            <p class="project-description">
-                                Large-scale industrial facility with specialized foundation work, heavy-duty structural construction, and advanced drainage systems for manufacturing operations.
-                            </p>
-                            <div class="project-details">
-                                <div class="detail-item">
-                                    <i class="fas fa-calendar"></i>
-                                    <span>Duration: 20 months</span>
-                                </div>
-                                <div class="detail-item">
-                                    <i class="fas fa-industry"></i>
-                                    <span>Industrial</span>
-                                </div>
-                                <div class="detail-item">
-                                    <i class="fas fa-ruler-combined"></i>
-                                    <span>35,000 sqm</span>
-                                </div>
-                                <div class="detail-item">
-                                    <i class="fas fa-users"></i>
-                                    <span>60 Workers</span>
-                                </div>
-                            </div>
-                            <div class="project-features">
-                                <span class="feature-tag">Heavy Foundation</span>
-                                <span class="feature-tag">Drainage Systems</span>
-                                <span class="feature-tag">Industrial Flooring</span>
-                                <span class="feature-tag">Structural Steel</span>
-                            </div>
-                            <div class="project-footer">
-                                <span class="project-value">$15.7M</span>
-                                <a href="#" class="project-btn">View Progress</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Project 4 -->
-                <div class="col-lg-4 col-md-6 project-item" data-category="architectural residential">
-                    <div class="project-card animate-on-scroll">
-                        <div class="project-image">
-                            <img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?fm=jpg&q=60&w=800" alt="Modern Apartment Project">
-                                                        <div class="project-status">Completed</div>
-                            <div class="project-category">Residential</div>
-                        </div>
-                        <div class="project-content">
-                            <h3 class="project-title">Punggol Modern Apartments</h3>
-                            <div class="project-location">
-                                <i class="fas fa-map-marker-alt"></i>
-                                Punggol, Singapore
-                            </div>
-                            <p class="project-description">
-                                A residential complex featuring modern architecture, efficient space planning, and sustainable green building practices, designed for family living.
-                            </p>
-                            <div class="project-details">
-                                <div class="detail-item">
-                                    <i class="fas fa-calendar"></i>
-                                    <span>Duration: 16 months</span>
-                                </div>
-                                <div class="detail-item">
-                                    <i class="fas fa-home"></i>
-                                    <span>80 Units</span>
-                                </div>
-                                <div class="detail-item">
-                                    <i class="fas fa-ruler-combined"></i>
-                                    <span>12,000 sqm</span>
-                                </div>
-                                <div class="detail-item">
-                                    <i class="fas fa-users"></i>
-                                    <span>35 Workers</span>
-                                </div>
-                            </div>
-                            <div class="project-features">
-                                <span class="feature-tag">Green Building</span>
-                                <span class="feature-tag">Energy Efficient</span>
-                                <span class="feature-tag">Smart Interiors</span>
-                                <span class="feature-tag">Modern Architecture</span>
-                            </div>
-                            <div class="project-footer">
-                                <span class="project-value">$7.9M</span>
-                                <a href="#" class="project-btn">View Details</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+   
 
     <!-- Call to Action -->
     <section class="cta-section">
@@ -954,26 +741,7 @@
         window.addEventListener("scroll", animateOnScroll);
         animateOnScroll();
 
-        // Filtering
-        const filterBtns = document.querySelectorAll(".filter-btn");
-        const projectItems = document.querySelectorAll(".project-item");
-
-        filterBtns.forEach(btn => {
-            btn.addEventListener("click", function() {
-                filterBtns.forEach(b => b.classList.remove("active"));
-                this.classList.add("active");
-                const filter = this.getAttribute("data-filter");
-
-                projectItems.forEach(item => {
-                    const categories = item.getAttribute("data-category").split(" ");
-                    if (filter === "all" || categories.includes(filter)) {
-                        item.classList.remove("hidden");
-                    } else {
-                        item.classList.add("hidden");
-                    }
-                });
-            });
-        });
+      
     </script>
 </body>
 </html>

@@ -9,8 +9,6 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
     <link rel="icon" href="images/favicon.png" type="image/png" sizes="64x64">
-
-
     <style>
         * {
             margin: 0;
@@ -57,7 +55,7 @@
 .logo-img {
     width: 160px;
     height: 160px;
-    margin-right: 12px;
+    margin-right: -20px; 
     border-radius: 8px;
     margin-top: -45px;
     margin-bottom: -45px;
@@ -257,7 +255,7 @@
         /* Cards */
         .card {
             background: white;
-            border: none;
+            border: 1px solid #e9ecef; 
             border-radius: 15px;
             box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
             transition: all 0.3s ease;
@@ -284,7 +282,9 @@
         .card:hover {
     transform: translateY(-10px) scale(1.02);
     box-shadow: 0 20px 60px rgba(102, 126, 234, 0.2);
+     border: 2px solid #667eea;
 }
+        
         .card-title {
             font-size: 1.5rem;
             font-weight: 600;
@@ -310,6 +310,7 @@
             padding: 40px;
             border-radius: 15px;
             text-align: center;
+            border: 1px solid #e9ecef;
             box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
             transition: all 0.3s ease;
         }
@@ -317,6 +318,7 @@
         .mission-card:hover {
             transform: translateY(-5px);
             box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+            border: 2px solid #667eea; 
         }
 
         .mission-card h3 {
@@ -584,6 +586,103 @@
             opacity: 1;
             transform: translateY(0);
         }
+        /* Small phones */
+@media (max-width: 480px) {
+    .hero-title {
+        font-size: 2rem;
+    }
+    
+    .hero-subtitle {
+        font-size: 1rem;
+    }
+    
+    .section {
+        padding: 40px 0;
+    }
+    
+    .cta-buttons {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .cta-btn {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+/* Large tablets */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .hero-title {
+        font-size: 3rem;
+    }
+}
+@media (max-width: 768px) {
+    .hero-title {
+        font-size: 2.5rem;
+    }
+
+    .hero-subtitle {
+        font-size: 1.1rem;
+    }
+
+    .cta-buttons {
+        justify-content: center;
+    }
+
+    .mission-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-item {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .contact-icon {
+        margin-right: 0;
+        margin-bottom: 15px;
+    }
+
+    .scroll-to-top {
+        bottom: 20px;
+        right: 20px;
+        width: 40px;
+        height: 40px;
+        font-size: 1.2rem;
+    }
+
+    /* Additional mobile fixes for cards */
+    .card {
+        margin-bottom: 20px;
+    }
+
+    .mission-card {
+        padding: 30px 20px; /* Reduce padding on mobile */
+        margin-bottom: 20px;
+    }
+
+    .section {
+        padding: 60px 0; /* Reduce section padding on mobile */
+    }
+
+    .service-header {
+        padding: 25px 20px; /* Adjust service card padding */
+    }
+
+    .service-content {
+        padding: 25px 20px;
+    }
+}
+@media (max-width: 768px) {
+    .card {
+        border: 1px solid #667eea; /* Always show border on mobile */
+    }
+    
+    .mission-card {
+        border: 1px solid #667eea; /* Always show border on mobile */
+    }
+}
     </style>
 </head>
 <body>
